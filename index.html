@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Starty — юридические документы</title>
+<title>Starty — юридические документы / Legal documents</title>
 <link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  var saved;
+  try{saved=localStorage.getItem('starty_legal_lang');}catch(e){}
+  var lang=(saved==='ru'||saved==='en')?saved:(((navigator.language||'').toLowerCase().indexOf('ru')===0)?'ru':'en');
+  document.documentElement.setAttribute('data-lang',lang);
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -25,32 +33,58 @@
 </linearGradient>
 </defs>
 </svg></span>Starty</a>
-    <a href="privacy-policy.html" class="navlink">Политика ПДн</a>
-    <a href="consent.html" class="navlink">Согласие</a>
-    <a href="terms-of-service.html" class="navlink">Пользовательское соглашение</a>
+    <a href="privacy-policy.html" class="navlink"><span class="lang-ru">Политика ПДн</span><span class="lang-en">Privacy Policy</span></a>
+    <a href="consent.html" class="navlink"><span class="lang-ru">Согласие</span><span class="lang-en">Consent</span></a>
+    <a href="terms-of-service.html" class="navlink"><span class="lang-ru">Пользовательское соглашение</span><span class="lang-en">Terms of Service</span></a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 <div class="page">
   <div class="hero">
-    <h1>Юридические документы</h1>
-    <p class="intro">Расширение для браузера Starty — умная стартовая страница. Здесь собраны документы, регулирующие использование расширения и обработку ваших данных.</p>
+    <h1><span class="lang-ru">Юридические документы</span><span class="lang-en">Legal documents</span></h1>
+    <p class="intro">
+      <span class="lang-ru">Расширение для браузера Starty — умная стартовая страница. Здесь собраны документы, регулирующие использование расширения и обработку ваших данных.</span>
+      <span class="lang-en">Starty browser extension — a smart new tab page. This page collects the documents governing use of the extension and the processing of your data.</span>
+    </p>
   </div>
 
   <div class="doc-links">
     <a class="doc-link" href="privacy-policy.html">
-      <div class="doc-link-title">Политика обработки персональных данных <span class="arrow">→</span></div>
-      <div class="doc-link-desc">Какие данные обрабатываются, зачем, и куда они передаются</div>
+      <div class="doc-link-title">
+        <span class="lang-ru">Политика обработки персональных данных <span class="arrow">→</span></span>
+        <span class="lang-en">Privacy Policy <span class="arrow">→</span></span>
+      </div>
+      <div class="doc-link-desc">
+        <span class="lang-ru">Какие данные обрабатываются, зачем, и куда они передаются</span>
+        <span class="lang-en">What data is processed, why, and where it is sent</span>
+      </div>
     </a>
     <a class="doc-link" href="consent.html">
-      <div class="doc-link-title">Согласие на обработку персональных данных <span class="arrow">→</span></div>
-      <div class="doc-link-desc">На что именно вы соглашаетесь, по каждой функции отдельно</div>
+      <div class="doc-link-title">
+        <span class="lang-ru">Согласие на обработку персональных данных <span class="arrow">→</span></span>
+        <span class="lang-en">Consent to Personal Data Processing <span class="arrow">→</span></span>
+      </div>
+      <div class="doc-link-desc">
+        <span class="lang-ru">На что именно вы соглашаетесь, по каждой функции отдельно</span>
+        <span class="lang-en">Exactly what you're agreeing to, broken down by feature</span>
+      </div>
     </a>
     <a class="doc-link" href="terms-of-service.html">
-      <div class="doc-link-title">Пользовательское соглашение <span class="arrow">→</span></div>
-      <div class="doc-link-desc">Условия использования расширения</div>
+      <div class="doc-link-title">
+        <span class="lang-ru">Пользовательское соглашение <span class="arrow">→</span></span>
+        <span class="lang-en">Terms of Service <span class="arrow">→</span></span>
+      </div>
+      <div class="doc-link-desc">
+        <span class="lang-ru">Условия использования расширения</span>
+        <span class="lang-en">Terms governing use of the extension</span>
+      </div>
     </a>
   </div>
 </div>
 <footer><div class="page">Starty · 2026</div></footer>
+<script src="lang-toggle.js"></script>
 </body>
 </html>

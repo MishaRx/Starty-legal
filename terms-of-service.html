@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Пользовательское соглашение — Starty</title>
+<title>Пользовательское соглашение — Starty / Terms of Service — Starty</title>
 <link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  var saved;
+  try{saved=localStorage.getItem('starty_legal_lang');}catch(e){}
+  var lang=(saved==='ru'||saved==='en')?saved:(((navigator.language||'').toLowerCase().indexOf('ru')===0)?'ru':'en');
+  document.documentElement.setAttribute('data-lang',lang);
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -25,103 +33,145 @@
 </linearGradient>
 </defs>
 </svg></span>Starty</a>
-    <a href="privacy-policy.html" class="navlink">Политика ПДн</a>
-    <a href="consent.html" class="navlink">Согласие</a>
-    <a href="terms-of-service.html" class="navlink active">Пользовательское соглашение</a>
+    <a href="privacy-policy.html" class="navlink"><span class="lang-ru">Политика ПДн</span><span class="lang-en">Privacy Policy</span></a>
+    <a href="consent.html" class="navlink"><span class="lang-ru">Согласие</span><span class="lang-en">Consent</span></a>
+    <a href="terms-of-service.html" class="navlink active"><span class="lang-ru">Пользовательское соглашение</span><span class="lang-en">Terms of Service</span></a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 <div class="page">
   <div class="hero">
-    <h1>Пользовательское соглашение</h1>
-    <p class="meta">Расширение Starty · Дата последнего обновления: 16 июля 2026 г.</p>
+    <h1><span class="lang-ru">Пользовательское соглашение</span><span class="lang-en">Terms of Service</span></h1>
+    <p class="meta"><span class="lang-ru">Расширение Starty · Дата последнего обновления: 18 июля 2026 г.</span><span class="lang-en">Starty extension · Last updated: July 18, 2026</span></p>
   </div>
 
-  <p style="max-width:600px;color:var(--muted);margin-bottom:40px">Устанавливая и используя расширение Starty («Расширение», «Сервис»), вы соглашаетесь с условиями настоящего Пользовательского соглашения («Соглашение»). Если вы не согласны с каким-либо из условий — пожалуйста, не устанавливайте и не используйте Расширение.</p>
+  <p style="max-width:600px;color:var(--muted);margin-bottom:40px" class="lang-ru">Устанавливая и используя расширение Starty («Расширение», «Сервис»), вы соглашаетесь с условиями настоящего Пользовательского соглашения («Соглашение»). Если вы не согласны с каким-либо из условий — пожалуйста, не устанавливайте и не используйте Расширение.</p>
+  <p style="max-width:600px;color:var(--muted);margin-bottom:40px" class="lang-en">By installing and using the Starty extension ("Extension", "Service"), you agree to the terms of this Terms of Service ("Agreement"). If you do not agree to any of these terms, please do not install or use the Extension.</p>
 
   <div class="card">
 
     <div class="section">
-      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2>Описание сервиса</h2></div></div>
-      <p>Starty — браузерное расширение, заменяющее страницу новой вкладки на настраиваемую панель со ссылками, папками, режимами работы, виджетами (заметки, задачи, погода, помодоро-таймер).</p>
+      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2><span class="lang-ru">Описание сервиса</span><span class="lang-en">Description of the Service</span></h2></div></div>
+      <p class="lang-ru">Starty — браузерное расширение, заменяющее страницу новой вкладки на настраиваемую панель со ссылками, папками, режимами работы, виджетами (заметки, задачи, погода, помодоро-таймер).</p>
+      <p class="lang-en">Starty is a browser extension that replaces the new tab page with a customizable dashboard of links, folders, work modes, and widgets (notes, tasks, weather, a Pomodoro timer).</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2>Кто может пользоваться</h2></div></div>
-      <p>Сервисом может пользоваться любой человек, установивший Расширение через официальный магазин расширений (Chrome Web Store) или получивший его иным законным путём.</p>
+      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2><span class="lang-ru">Кто может пользоваться</span><span class="lang-en">Who May Use the Service</span></h2></div></div>
+      <p class="lang-ru">Сервисом может пользоваться любой человек, установивший Расширение через официальный магазин расширений (Chrome Web Store) или получивший его иным законным путём.</p>
+      <p class="lang-en">The Service may be used by anyone who has installed the Extension through the official extension store (Chrome Web Store) or obtained it through other lawful means.</p>
+      <p class="lang-ru">Расширение не адресовано лицам младше 18 лет. Устанавливая и используя Расширение, вы подтверждаете, что вам исполнилось 18 лет, либо возраст, начиная с которого законодательство вашей страны позволяет вам самостоятельно давать согласие на обработку персональных данных и заключать подобные соглашения.</p>
+      <p class="lang-en">The Extension is not directed at persons under 18. By installing and using the Extension, you confirm that you are at least 18 years old, or the age at which the law of your country allows you to independently consent to personal data processing and enter into agreements of this kind.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2>Ваши данные и контент</h2></div></div>
-      <ul>
+      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2><span class="lang-ru">Ваши данные и контент</span><span class="lang-en">Your Data and Content</span></h2></div></div>
+      <ul class="lang-ru">
         <li>Все ссылки, папки, заметки и задачи, которые вы создаёте в Расширении — принадлежат вам. Мы не заявляем никаких прав на содержимое, которое вы сохраняете</li>
         <li>Вы несёте единоличную ответственность за содержимое ссылок, которые вы сохраняете (в том числе за загруженные вами кастомные иконки) — Расширение не проверяет и не модерирует эти ссылки</li>
         <li>Подробнее о том, какие данные обрабатываются — в <a href="privacy-policy.html">Политике обработки персональных данных</a></li>
       </ul>
+      <ul class="lang-en">
+        <li>All links, folders, notes, and tasks you create in the Extension belong to you. We claim no rights to the content you save</li>
+        <li>You are solely responsible for the content of the links you save (including any custom icons you upload) — the Extension does not review or moderate these links</li>
+        <li>See the <a href="privacy-policy.html">Privacy Policy</a> for details on what data is processed</li>
+      </ul>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2>Что запрещено</h2></div></div>
-      <p>При использовании Расширения запрещается:</p>
-      <ul>
+      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2><span class="lang-ru">Что запрещено</span><span class="lang-en">Prohibited Conduct</span></h2></div></div>
+      <p class="lang-ru">При использовании Расширения запрещается:</p>
+      <p class="lang-en">When using the Extension, you may not:</p>
+      <ul class="lang-ru">
         <li>Использовать Расширение для незаконной деятельности</li>
         <li>Пытаться вмешаться в работу Расширения, включая попытки обхода технических ограничений</li>
         <li>Использовать автоматизированные средства для массового злоупотребления функциями Расширения</li>
       </ul>
+      <ul class="lang-en">
+        <li>Use the Extension for unlawful activity</li>
+        <li>Attempt to interfere with the Extension's operation, including attempts to bypass its technical limitations</li>
+        <li>Use automated means to abuse the Extension's features at scale</li>
+      </ul>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2>Отказ от гарантий</h2></div></div>
-      <p>Расширение предоставляется «как есть» (AS IS), без каких-либо гарантий, явных или подразумеваемых. Мы не гарантируем:</p>
-      <ul>
+      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2><span class="lang-ru">Отказ от гарантий</span><span class="lang-en">Disclaimer of Warranties</span></h2></div></div>
+      <p class="lang-ru">Расширение предоставляется «как есть» (AS IS), без каких-либо гарантий, явных или подразумеваемых. Мы не гарантируем:</p>
+      <p class="lang-en">The Extension is provided "AS IS", without warranties of any kind, express or implied. We do not guarantee:</p>
+      <ul class="lang-ru">
         <li>Бесперебойную и безошибочную работу Расширения</li>
         <li>Точность прогноза погоды или иных данных от внешних сервисов (open-meteo.com, wttr.in)</li>
         <li>Сохранность данных, синхронизируемых через инфраструктуру браузера — это зависит от браузера/аккаунта пользователя, не от нас</li>
       </ul>
-      <div class="callout">Мы рекомендуем периодически делать резервную экспортную копию ваших данных через функцию «Экспорт настроек» — особенно перед удалением Расширения, переустановкой браузера или отключением синхронизации.</div>
+      <ul class="lang-en">
+        <li>Uninterrupted or error-free operation of the Extension</li>
+        <li>The accuracy of weather forecasts or other data from external services (open-meteo.com, wttr.in)</li>
+        <li>The integrity of data synced through browser infrastructure — this depends on the user's browser/account, not on us</li>
+      </ul>
+      <div class="callout lang-ru">Мы рекомендуем периодически делать резервную экспортную копию ваших данных через функцию «Экспорт настроек» — особенно перед удалением Расширения, переустановкой браузера или отключением синхронизации.</div>
+      <div class="callout lang-en">We recommend periodically making a backup export of your data via the "Export settings" feature — especially before removing the Extension, reinstalling your browser, or turning off sync.</div>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2>Ограничение ответственности</h2></div></div>
-      <p>В максимально допустимой законом степени мы не несём ответственности за:</p>
-      <ul>
+      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2><span class="lang-ru">Ограничение ответственности</span><span class="lang-en">Limitation of Liability</span></h2></div></div>
+      <p class="lang-ru">В максимально допустимой законом степени мы не несём ответственности за:</p>
+      <p class="lang-en">To the maximum extent permitted by law, we are not liable for:</p>
+      <ul class="lang-ru">
         <li>Потерю данных, произошедшую по вине браузера пользователя, стороннего сервиса синхронизации или самого пользователя</li>
         <li>Любые прямые или косвенные убытки, возникшие в результате использования или невозможности использования Расширения</li>
         <li>Содержимое сторонних сайтов, на которые пользователь переходит по сохранённым в Расширении ссылкам</li>
       </ul>
+      <ul class="lang-en">
+        <li>Data loss caused by the user's browser, a third-party sync service, or the user themselves</li>
+        <li>Any direct or indirect losses arising from the use of, or inability to use, the Extension</li>
+        <li>The content of third-party sites the user visits via links saved in the Extension</li>
+      </ul>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">7</div><div class="section-body"><h2>Реклама (если/когда появится)</h2></div></div>
-      <p>Если в будущих версиях Расширения появится рекламный контент — он будет явно промаркирован как реклама в соответствии с требованиями законодательства РФ (ст. 18.1 закона «О рекламе»), с указанием рекламодателя и уникального идентификатора рекламы (ERID). Пользователь сможет скрыть рекламный блок способом, который будет описан в интерфейсе на момент появления этой функции.</p>
+      <div class="section-head"><div class="section-num">7</div><div class="section-body"><h2><span class="lang-ru">Реклама (если/когда появится)</span><span class="lang-en">Advertising (if and when introduced)</span></h2></div></div>
+      <p class="lang-ru">Если в будущих версиях Расширения появится рекламный контент — он будет явно промаркирован как реклама в соответствии с требованиями законодательства РФ (ст. 18.1 закона «О рекламе»), с указанием рекламодателя и уникального идентификатора рекламы (ERID). Пользователь сможет скрыть рекламный блок способом, который будет описан в интерфейсе на момент появления этой функции.</p>
+      <p class="lang-en">If advertising content is introduced in future versions of the Extension, it will be clearly labeled as advertising in accordance with Russian law (Art. 18.1 of the Advertising Law), including the advertiser's name and a unique ad identifier (ERID). Users will be able to hide the ad block in a manner described in the interface once this feature is introduced.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">8</div><div class="section-body"><h2>Платные функции (если/когда появятся)</h2></div></div>
-      <p>Если в будущем появятся платные функции (Premium) — условия их использования, оплаты и возврата средств будут описаны отдельным дополнением к этому Соглашению до момента запуска таких функций.</p>
+      <div class="section-head"><div class="section-num">8</div><div class="section-body"><h2><span class="lang-ru">Платные функции (если/когда появятся)</span><span class="lang-en">Paid Features (if and when introduced)</span></h2></div></div>
+      <p class="lang-ru">Если в будущем появятся платные функции (Premium) — условия их использования, оплаты и возврата средств будут описаны отдельным дополнением к этому Соглашению до момента запуска таких функций.</p>
+      <p class="lang-en">If paid features (Premium) are introduced in the future, the terms of their use, payment, and refunds will be described in a separate addendum to this Agreement before such features launch.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">9</div><div class="section-body"><h2>Изменения в Соглашении</h2></div></div>
-      <p>Мы можем обновлять это Соглашение по мере развития продукта. Актуальная версия всегда доступна по этой ссылке. Продолжение использования Расширения после публикации изменений означает согласие с обновлённой версией.</p>
+      <div class="section-head"><div class="section-num">9</div><div class="section-body"><h2><span class="lang-ru">Изменения в Соглашении</span><span class="lang-en">Changes to This Agreement</span></h2></div></div>
+      <p class="lang-ru">Мы можем обновлять это Соглашение по мере развития продукта. Актуальная версия всегда доступна по этой ссылке. Продолжение использования Расширения после публикации изменений означает согласие с обновлённой версией.</p>
+      <p class="lang-en">We may update this Agreement as the product evolves. The current version is always available at this link. Continued use of the Extension after changes are published constitutes acceptance of the updated version.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">10</div><div class="section-body"><h2>Прекращение использования</h2></div></div>
-      <p>Вы можете прекратить использование Расширения в любой момент, удалив его из браузера. Мы оставляем за собой право прекратить поддержку Расширения или отдельных его функций с уведомлением пользователей через страницу Расширения в Chrome Web Store.</p>
+      <div class="section-head"><div class="section-num">10</div><div class="section-body"><h2><span class="lang-ru">Прекращение использования</span><span class="lang-en">Termination of Use</span></h2></div></div>
+      <p class="lang-ru">Вы можете прекратить использование Расширения в любой момент, удалив его из браузера. Мы оставляем за собой право прекратить поддержку Расширения или отдельных его функций с уведомлением пользователей через страницу Расширения в Chrome Web Store.</p>
+      <p class="lang-en">You may stop using the Extension at any time by removing it from your browser. We reserve the right to discontinue support for the Extension or specific features, with notice to users via the Extension's Chrome Web Store page.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">11</div><div class="section-body"><h2>Применимое право</h2></div></div>
-      <p>Настоящее Соглашение регулируется законодательством Российской Федерации.</p>
+      <div class="section-head"><div class="section-num">11</div><div class="section-body"><h2><span class="lang-ru">Применимое право и разрешение споров</span><span class="lang-en">Governing Law and Dispute Resolution</span></h2></div></div>
+      <p class="lang-ru">Настоящее Соглашение регулируется законодательством Российской Федерации.</p>
+      <p class="lang-en">This Agreement is governed by the law of the Russian Federation.</p>
+      <p class="lang-ru">Стороны стремятся разрешать споры, возникающие в связи с использованием Расширения, путём переговоров. При недостижении согласия — спор подлежит рассмотрению в порядке, установленном действующим законодательством РФ, включая, если применимо, положения законодательства о защите прав потребителей о праве пользователя на выбор территориальной подсудности.</p>
+      <p class="lang-en">The parties will seek to resolve any disputes arising from use of the Extension through negotiation. If no agreement is reached, the dispute will be resolved in accordance with the procedure established by applicable Russian law, including, where applicable, consumer-protection provisions giving the user a choice of venue.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">12</div><div class="section-body"><h2>Контакты</h2></div></div>
-      <p>По всем вопросам, связанным с настоящим Соглашением — <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a>.</p>
+      <div class="section-head"><div class="section-num">12</div><div class="section-body"><h2><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></h2></div></div>
+      <p class="lang-ru">По всем вопросам, связанным с настоящим Соглашением — <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a>.</p>
+      <p class="lang-en">For any questions related to this Agreement — <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a>.</p>
     </div>
 
   </div>
 </div>
 <footer><div class="page">Starty · 2026</div></footer>
+<script src="lang-toggle.js"></script>
 </body>
 </html>

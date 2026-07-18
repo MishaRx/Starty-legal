@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Согласие на обработку персональных данных — Starty</title>
+<title>Согласие на обработку персональных данных — Starty / Consent — Starty</title>
 <link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  var saved;
+  try{saved=localStorage.getItem('starty_legal_lang');}catch(e){}
+  var lang=(saved==='ru'||saved==='en')?saved:(((navigator.language||'').toLowerCase().indexOf('ru')===0)?'ru':'en');
+  document.documentElement.setAttribute('data-lang',lang);
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -25,61 +33,74 @@
 </linearGradient>
 </defs>
 </svg></span>Starty</a>
-    <a href="privacy-policy.html" class="navlink">Политика ПДн</a>
-    <a href="consent.html" class="navlink active">Согласие</a>
-    <a href="terms-of-service.html" class="navlink">Пользовательское соглашение</a>
+    <a href="privacy-policy.html" class="navlink"><span class="lang-ru">Политика ПДн</span><span class="lang-en">Privacy Policy</span></a>
+    <a href="consent.html" class="navlink active"><span class="lang-ru">Согласие</span><span class="lang-en">Consent</span></a>
+    <a href="terms-of-service.html" class="navlink"><span class="lang-ru">Пользовательское соглашение</span><span class="lang-en">Terms of Service</span></a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 <div class="page">
   <div class="hero">
-    <h1>Согласие на обработку персональных данных</h1>
-    <p class="meta">Расширение Starty</p>
+    <h1><span class="lang-ru">Согласие на обработку персональных данных</span><span class="lang-en">Consent to Personal Data Processing</span></h1>
+    <p class="meta"><span class="lang-ru">Расширение Starty · Дата последнего обновления: 18 июля 2026 г.</span><span class="lang-en">Starty extension · Last updated: July 18, 2026</span></p>
   </div>
 
-  <p style="max-width:600px;color:var(--muted);margin-bottom:16px">Устанавливая расширение Starty и используя его функции, указанные ниже, вы даёте согласие на обработку ваших персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
-  <div class="callout" style="margin-bottom:40px">Это отдельный документ (не часть Политики обработки персональных данных и не часть Пользовательского соглашения) — в соответствии с требованиями законодательства, действующими с 1 сентября 2025 года.</div>
+  <p style="max-width:600px;color:var(--muted);margin-bottom:16px" class="lang-ru">Устанавливая расширение Starty и используя его функции, указанные ниже, вы даёте согласие на обработку ваших персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+  <p style="max-width:600px;color:var(--muted);margin-bottom:16px" class="lang-en">By installing the Starty extension and using the features described below, you consent to the processing of your personal data in accordance with Federal Law No. 152-FZ "On Personal Data" of 27.07.2006 (Russian Federation).</p>
+  <div class="callout" style="margin-bottom:40px">
+    <span class="lang-ru">Это отдельный документ (не часть Политики обработки персональных данных и не часть Пользовательского соглашения) — в соответствии с требованиями законодательства, действующими с 1 сентября 2025 года.</span>
+    <span class="lang-en">This is a standalone document (not part of the Privacy Policy or the Terms of Service) — in line with legal requirements in effect since September 1, 2025.</span>
+  </div>
 
   <div class="card">
 
     <div class="section">
-      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2>Оператор персональных данных</h2></div></div>
-      <p>Кутузов Михаил Александрович, самозанятый (плательщик налога на профессиональный доход)<br>ИНН 500128121362<br>Контактный email: <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a></p>
+      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2><span class="lang-ru">Оператор персональных данных</span><span class="lang-en">Personal Data Controller</span></h2></div></div>
+      <p>Kutuzov Mikhail Aleksandrovich <span class="lang-ru">(Кутузов Михаил Александрович), самозанятый (плательщик налога на профессиональный доход)</span><span class="lang-en">, self-employed individual (payer of professional income tax, Russia)</span><br><span class="lang-ru">ИНН</span><span class="lang-en">Tax ID (INN)</span> 500128121362<br><span class="lang-ru">Контактный email:</span><span class="lang-en">Contact email:</span> <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a></p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2>Основные функции расширения</h2></div></div>
-      <p>Эти функции работают как часть базовой работы расширения — согласие на них даётся самим фактом установки и использования расширения по его прямому назначению:</p>
-      <p><strong>Отображение значков сайтов.</strong> При сохранении ссылки её домен передаётся в google.com для получения иконки (favicon) сайта.</p>
-      <p><strong>Подсказки при поиске.</strong> Текст, который вы вводите в строку поиска (по мере набора, до нажатия Enter), передаётся в suggestqueries.google.com для показа вариантов автодополнения.</p>
-      <p><strong>Импорт закладок.</strong> Если при первой настройке вы выбираете «Импортировать закладки» — расширение считывает заголовки и адреса ваших закладок, чтобы предложить выбрать, какие добавить как плитки. Обрабатывается локально, никуда не передаётся.</p>
-      <p><strong>Подсказки недавних сайтов.</strong> При открытии формы добавления новой ссылки расширение может показать недавно закрытые вкладки как быстрые варианты. Обрабатывается локально, никуда не передаётся.</p>
+      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2><span class="lang-ru">Основные функции расширения</span><span class="lang-en">Core Features of the Extension</span></h2></div></div>
+      <p class="lang-ru">Эти функции работают как часть базовой работы расширения — согласие на них даётся самим фактом установки и использования расширения по его прямому назначению:</p>
+      <p class="lang-en">These features are part of the extension's basic operation — consent to them is given by the fact of installing and using the extension as intended:</p>
+      <p><strong class="lang-ru">Отображение значков сайтов.</strong><span class="lang-ru"> При сохранении ссылки её домен используется для получения иконки (favicon) сайта из локальной базы браузера (разрешение «favicon»). Обрабатывается локально, никуда не передаётся.</span><strong class="lang-en">Displaying site icons.</strong><span class="lang-en"> When you save a link, its domain is used to fetch the site's icon (favicon) from the browser's local database (the "favicon" permission). Processed locally, never transmitted anywhere.</span></p>
+      <p><strong class="lang-ru">Импорт закладок.</strong><span class="lang-ru"> Если при первой настройке вы выбираете «Импортировать закладки» — расширение считывает заголовки и адреса ваших закладок, чтобы предложить выбрать, какие добавить как плитки. Обрабатывается локально, никуда не передаётся.</span><strong class="lang-en">Bookmark import.</strong><span class="lang-en"> If you choose "Import bookmarks" during initial setup, the extension reads the titles and addresses of your bookmarks to let you pick which ones to add as tiles. Processed locally, never transmitted anywhere.</span></p>
+      <p><strong class="lang-ru">Подсказки недавних сайтов.</strong><span class="lang-ru"> При открытии формы добавления новой ссылки расширение может показать недавно закрытые вкладки как быстрые варианты. Обрабатывается локально, никуда не передаётся.</span><strong class="lang-en">Recent-site suggestions.</strong><span class="lang-en"> When opening the add-link form, the extension may show recently closed tabs as quick options. Processed locally, never transmitted anywhere.</span></p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2>Опциональные функции</h2></div></div>
-      <p>Каждая функция — строго добровольна, включается отдельным переключателем в настройках. Согласие даётся отдельно на каждую в момент, когда вы её включаете:</p>
-      <p><strong>Прогноз погоды.</strong> Передача названия города, которое вы вводите текстом, в open-meteo.com и wttr.in — для отображения прогноза погоды.</p>
-      <p><strong>Синхронизация между устройствами.</strong> Передача сохранённых ссылок, папок, режимов, заметок и задач в инфраструктуру синхронизации вашего браузера — для доступа с разных устройств.</p>
+      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2><span class="lang-ru">Опциональные функции</span><span class="lang-en">Optional Features</span></h2></div></div>
+      <p class="lang-ru">Каждая функция — строго добровольна, включается отдельным переключателем в настройках. Согласие даётся отдельно на каждую в момент, когда вы её включаете:</p>
+      <p class="lang-en">Each feature is strictly opt-in, enabled via its own toggle in settings. Consent is given separately for each one, at the moment you turn it on:</p>
+      <p><strong class="lang-ru">Прогноз погоды.</strong><span class="lang-ru"> Передача названия города, которое вы вводите текстом, в open-meteo.com и wttr.in — для отображения прогноза погоды.</span><strong class="lang-en">Weather forecast.</strong><span class="lang-en"> Sending the city name you type to open-meteo.com and wttr.in — to display a weather forecast.</span></p>
+      <p><strong class="lang-ru">Синхронизация между устройствами.</strong><span class="lang-ru"> Передача сохранённых ссылок, папок, режимов, заметок и задач в инфраструктуру синхронизации вашего браузера — для доступа с разных устройств.</span><strong class="lang-en">Cross-device sync.</strong><span class="lang-en"> Sending your saved links, folders, modes, notes, and tasks to your browser's sync infrastructure — for access across devices.</span></p>
+      <p><strong class="lang-ru">Подсказки при поиске.</strong><span class="lang-ru"> Текст, который вы вводите в строку поиска (по мере набора, до нажатия Enter), передаётся в suggestqueries.google.com для показа вариантов автодополнения. По умолчанию выключено.</span><strong class="lang-en">Search suggestions.</strong><span class="lang-en"> Text you type into the search bar (as you type, before pressing Enter) is sent to suggestqueries.google.com to show autocomplete suggestions. Off by default.</span></p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2>Срок действия согласия</h2></div></div>
-      <p>Согласие на опциональные функции действует, пока функция включена в настройках. Согласие на основные функции действует, пока вы пользуетесь расширением. В обоих случаях — до момента удаления расширения, если наступит раньше.</p>
+      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2><span class="lang-ru">Срок действия согласия</span><span class="lang-en">Duration of Consent</span></h2></div></div>
+      <p class="lang-ru">Согласие на опциональные функции действует, пока функция включена в настройках. Согласие на основные функции действует, пока вы пользуетесь расширением. В обоих случаях — до момента удаления расширения, если наступит раньше.</p>
+      <p class="lang-en">Consent for optional features lasts as long as the feature is enabled in settings. Consent for core features lasts as long as you use the extension. In both cases, consent ends no later than when the extension is removed, if that happens sooner.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2>Как отозвать согласие</h2></div></div>
-      <p><strong>Опциональные функции</strong> — отключите переключатель в настройках в любой момент, это так же просто, как и включить его.</p>
-      <p><strong>Основные функции</strong> — отдельного тумблера нет; не используйте конкретную функцию (например, не нажимайте «Импортировать закладки») либо удалите расширение целиком.</p>
+      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2><span class="lang-ru">Как отозвать согласие</span><span class="lang-en">How to Withdraw Consent</span></h2></div></div>
+      <p><strong class="lang-ru">Опциональные функции</strong><span class="lang-ru"> — отключите переключатель в настройках в любой момент, это так же просто, как и включить его.</span><strong class="lang-en">Optional features</strong><span class="lang-en"> — turn off the toggle in settings at any time; it's just as easy as turning it on.</span></p>
+      <p><strong class="lang-ru">Основные функции</strong><span class="lang-ru"> — отдельного тумблера нет; не используйте конкретную функцию (например, не нажимайте «Импортировать закладки») либо удалите расширение целиком.</span><strong class="lang-en">Core features</strong><span class="lang-en"> — there is no separate toggle; simply don't use that particular feature (for example, don't click "Import bookmarks"), or remove the extension entirely.</span></p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2>Ваши права</h2></div></div>
-      <p>Полный перечень прав как субъекта персональных данных — в разделе 8 <a href="privacy-policy.html">Политики обработки персональных данных</a>.</p>
+      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2><span class="lang-ru">Ваши права</span><span class="lang-en">Your Rights</span></h2></div></div>
+      <p class="lang-ru">Полный перечень прав как субъекта персональных данных — в разделе 8 <a href="privacy-policy.html">Политики обработки персональных данных</a>.</p>
+      <p class="lang-en">The full list of your rights as a data subject is in section 8 of the <a href="privacy-policy.html">Privacy Policy</a>.</p>
     </div>
 
   </div>
 </div>
 <footer><div class="page">Starty · 2026</div></footer>
+<script src="lang-toggle.js"></script>
 </body>
 </html>

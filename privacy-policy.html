@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Политика обработки персональных данных — Starty</title>
+<title>Политика обработки персональных данных — Starty / Privacy Policy — Starty</title>
 <link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  var saved;
+  try{saved=localStorage.getItem('starty_legal_lang');}catch(e){}
+  var lang=(saved==='ru'||saved==='en')?saved:(((navigator.language||'').toLowerCase().indexOf('ru')===0)?'ru':'en');
+  document.documentElement.setAttribute('data-lang',lang);
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -25,132 +33,195 @@
 </linearGradient>
 </defs>
 </svg></span>Starty</a>
-    <a href="privacy-policy.html" class="navlink active">Политика ПДн</a>
-    <a href="consent.html" class="navlink">Согласие</a>
-    <a href="terms-of-service.html" class="navlink">Пользовательское соглашение</a>
+    <a href="privacy-policy.html" class="navlink active"><span class="lang-ru">Политика ПДн</span><span class="lang-en">Privacy Policy</span></a>
+    <a href="consent.html" class="navlink"><span class="lang-ru">Согласие</span><span class="lang-en">Consent</span></a>
+    <a href="terms-of-service.html" class="navlink"><span class="lang-ru">Пользовательское соглашение</span><span class="lang-en">Terms of Service</span></a>
+    <div class="lang-toggle">
+      <button type="button" data-lang="ru">RU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
 <div class="page">
   <div class="hero">
-    <h1>Политика обработки персональных данных</h1>
-    <p class="meta">Расширение Starty · Дата последнего обновления: 16 июля 2026 г.</p>
+    <h1><span class="lang-ru">Политика обработки персональных данных</span><span class="lang-en">Privacy Policy</span></h1>
+    <p class="meta"><span class="lang-ru">Расширение Starty · Дата последнего обновления: 18 июля 2026 г.</span><span class="lang-en">Starty extension · Last updated: July 18, 2026</span></p>
   </div>
 
   <div class="card">
 
     <div class="section">
-      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2>Сведения об операторе</h2></div></div>
-      <p>Оператором персональных данных является:</p>
-      <p>Кутузов Михаил Александрович, самозанятый (плательщик налога на профессиональный доход)<br>ИНН 500128121362<br>Контактный email: <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a></p>
+      <div class="section-head"><div class="section-num">1</div><div class="section-body"><h2><span class="lang-ru">Сведения об операторе</span><span class="lang-en">Data Controller</span></h2></div></div>
+      <p class="lang-ru">Оператором персональных данных является:</p>
+      <p class="lang-en">The personal data controller is:</p>
+      <p>Kutuzov Mikhail Aleksandrovich <span class="lang-ru">(Кутузов Михаил Александрович), самозанятый (плательщик налога на профессиональный доход)</span><span class="lang-en">, self-employed individual (payer of professional income tax, Russia)</span><br><span class="lang-ru">ИНН</span><span class="lang-en">Tax ID (INN)</span> 500128121362<br><span class="lang-ru">Контактный email:</span><span class="lang-en">Contact email:</span> <a href="mailto:ktzvdesign@gmail.com">ktzvdesign@gmail.com</a></p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2>Цели обработки персональных данных</h2></div></div>
-      <p>Мы обрабатываем персональные данные исключительно для следующих целей:</p>
-      <ul>
+      <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2><span class="lang-ru">Цели обработки персональных данных</span><span class="lang-en">Purposes of Processing</span></h2></div></div>
+      <p class="lang-ru">Мы обрабатываем персональные данные исключительно для следующих целей:</p>
+      <p class="lang-en">We process personal data exclusively for the following purposes:</p>
+      <ul class="lang-ru">
         <li>Отображение прогноза погоды по городу, который пользователь указывает самостоятельно</li>
-        <li>Отображение значков (favicon) сайтов, ссылки на которые пользователь сохраняет в расширении</li>
-        <li>Показ подсказок при вводе запроса в строку поиска</li>
+        <li>Отображение значков (favicon) сайтов, ссылки на которые пользователь сохраняет в расширении — обрабатывается локально, не передаётся третьим лицам</li>
+        <li>Показ подсказок при вводе запроса в строку поиска (только если пользователь сам включил эту функцию — по умолчанию выключена)</li>
         <li>Предложение быстрого добавления ссылок на основе закладок браузера (только при первой настройке, по выбору пользователя) и недавно закрытых вкладок (при открытии формы добавления ссылки)</li>
         <li>Подбор релевантных ссылок на основе указанной пользователем сферы деятельности при первой настройке расширения</li>
         <li>Синхронизация настроек и сохранённых ссылок между устройствами пользователя (только если пользователь сам включил эту функцию)</li>
       </ul>
-      <p>Мы <strong>не используем</strong> персональные данные для целей, не указанных выше — в частности, не передаём и не продаём их третьим лицам для маркетинга, не используем для кредитного скоринга и не строим индивидуальные профили пользователей.</p>
+      <ul class="lang-en">
+        <li>Displaying a weather forecast for a city the user enters themselves</li>
+        <li>Displaying site icons (favicons) for links the user saves in the extension — processed locally, not shared with third parties</li>
+        <li>Showing suggestions while typing in the search bar (only if the user has enabled this feature themselves — off by default)</li>
+        <li>Offering quick-add suggestions based on browser bookmarks (only during initial setup, by user choice) and recently closed tabs (when opening the add-link form)</li>
+        <li>Suggesting relevant links based on the industry the user specifies during initial setup</li>
+        <li>Syncing settings and saved links across the user's devices (only if the user has enabled this feature themselves)</li>
+      </ul>
+      <p class="lang-ru">Мы <strong>не используем</strong> персональные данные для целей, не указанных выше — в частности, не передаём и не продаём их третьим лицам для маркетинга, не используем для кредитного скоринга и не строим индивидуальные профили пользователей.</p>
+      <p class="lang-en">We <strong>do not use</strong> personal data for any purpose other than those listed above — in particular, we do not share or sell it to third parties for marketing, use it for credit scoring, or build individual user profiles.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2>Какие данные обрабатываются</h2></div></div>
-      <p><strong>3.1. Данные, которые передаются во внешние сервисы</strong></p>
-      <table>
+      <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2><span class="lang-ru">Какие данные обрабатываются</span><span class="lang-en">What Data Is Processed</span></h2></div></div>
+      <p><strong class="lang-ru">3.1. Данные, которые передаются во внешние сервисы</strong><strong class="lang-en">3.1. Data sent to external services</strong></p>
+      <table class="lang-ru">
         <thead><tr><th>Данные</th><th>Когда</th><th>Куда</th></tr></thead>
         <tbody>
           <tr><td>Название города</td><td>Только если пользователь сам вписал город текстом (без GPS)</td><td>open-meteo.com, wttr.in</td></tr>
-          <tr><td>Домен сохранённой ссылки</td><td>При отображении значка сайта на плитке</td><td>google.com (favicon)</td></tr>
-          <tr><td>Текст в строке поиска (по мере набора)</td><td>При наборе текста в поиске</td><td>suggestqueries.google.com</td></tr>
+          <tr><td>Текст в строке поиска (по мере набора)</td><td>Только если включена функция «Подсказки при поиске» (по умолчанию выключена)</td><td>suggestqueries.google.com</td></tr>
           <tr><td>Сохранённые ссылки, папки, режимы, заметки, задачи</td><td>Только если включена синхронизация</td><td>Инфраструктура синхронизации браузера</td></tr>
         </tbody>
       </table>
-      <p><strong>3.2. Данные, которые обрабатываются только локально (никогда не покидают ваше устройство)</strong></p>
-      <table>
+      <table class="lang-en">
+        <thead><tr><th>Data</th><th>When</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td>City name</td><td>Only if the user has typed in a city name themselves (no GPS)</td><td>open-meteo.com, wttr.in</td></tr>
+          <tr><td>Search bar text (as you type)</td><td>Only if the "Search suggestions" feature is enabled (off by default)</td><td>suggestqueries.google.com</td></tr>
+          <tr><td>Saved links, folders, modes, notes, tasks</td><td>Only if sync is enabled</td><td>Browser sync infrastructure</td></tr>
+        </tbody>
+      </table>
+      <p><strong class="lang-ru">3.2. Данные, которые обрабатываются только локально (никогда не покидают ваше устройство)</strong><strong class="lang-en">3.2. Data processed only locally (never leaves your device)</strong></p>
+      <table class="lang-ru">
         <thead><tr><th>Данные</th><th>Когда</th><th>Зачем</th></tr></thead>
         <tbody>
-          <tr><td>Закладки браузера</td><td>Только при импорте закладок в настройке</td><td>Предложить выбрать закладки для добавления как плитки</td></tr>
+          <tr><td>Домен сохранённой ссылки</td><td>При отображении значка (favicon) сайта на плитке</td><td>Получение иконки сайта из локальной базы фавиконок браузера (разрешение <code>favicon</code>) — запрос не выходит за пределы устройства</td></tr>
+          <tr><td>Закладки браузера</td><td>Только при импорте закладок в настройке (само разрешение браузер запрашивает в момент нажатия кнопки «Импортировать закладки», а не при установке расширения)</td><td>Предложить выбрать закладки для добавления как плитки</td></tr>
           <tr><td>Недавно закрытые вкладки</td><td>При открытии формы добавления ссылки</td><td>Предложить быстро добавить недавний сайт</td></tr>
         </tbody>
       </table>
-      <p>Данные из раздела 3.2 технически доступны расширению (через разрешения <code>bookmarks</code> и <code>sessions</code>), но обрабатываются исключительно на устройстве пользователя — мы не отправляем их на какой-либо сервер.</p>
-      <p>Мы <strong>не собираем и не храним</strong>: имя, фамилию, email, номер телефона, пароли, платёжные данные. Историю посещённых сайтов <strong>не собираем и не анализируем</strong>, кроме моментального локального показа подсказок из раздела 3.2.</p>
+      <table class="lang-en">
+        <thead><tr><th>Data</th><th>When</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Domain of a saved link</td><td>When displaying a site's favicon on a tile</td><td>Fetching the site icon from the browser's local favicon database (<code>favicon</code> permission) — the request never leaves the device</td></tr>
+          <tr><td>Browser bookmarks</td><td>Only during bookmark import in setup (the browser itself requests this permission at the moment you click "Import bookmarks", not at install time)</td><td>Letting you pick which bookmarks to add as tiles</td></tr>
+          <tr><td>Recently closed tabs</td><td>When opening the add-link form</td><td>Suggesting a recent site for quick adding</td></tr>
+        </tbody>
+      </table>
+      <p class="lang-ru">Данные из раздела 3.2 технически доступны расширению (через разрешения <code>bookmarks</code>, <code>sessions</code> и <code>favicon</code>), но обрабатываются исключительно на устройстве пользователя — мы не отправляем их на какой-либо сервер.</p>
+      <p class="lang-en">The data in section 3.2 is technically accessible to the extension (via the <code>bookmarks</code>, <code>sessions</code>, and <code>favicon</code> permissions), but is processed exclusively on the user's device — we do not send it to any server.</p>
+      <p class="lang-ru">Мы <strong>не собираем и не храним</strong>: имя, фамилию, email, номер телефона, пароли, платёжные данные. Историю посещённых сайтов <strong>не собираем и не анализируем</strong>, кроме моментального локального показа подсказок из раздела 3.2.</p>
+      <p class="lang-en">We <strong>do not collect or store</strong>: first/last name, email, phone number, passwords, or payment details. We <strong>do not collect or analyze</strong> browsing history, other than the instantaneous local display of the suggestions described in section 3.2.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2>Категории субъектов персональных данных</h2></div></div>
-      <p>Пользователи расширения Starty — физические лица, установившие расширение в свой браузер. Расширение не предназначено для детей младше 18 лет и не адресовано им намеренно; мы не запрашиваем возраст пользователя и не собираем данные, которые позволили бы определить, что пользователь является несовершеннолетним.</p>
+      <div class="section-head"><div class="section-num">4</div><div class="section-body"><h2><span class="lang-ru">Категории субъектов персональных данных</span><span class="lang-en">Categories of Data Subjects</span></h2></div></div>
+      <p class="lang-ru">Пользователи расширения Starty — физические лица, установившие расширение в свой браузер. Расширение не предназначено для детей младше 18 лет и не адресовано им намеренно; мы не запрашиваем возраст пользователя и не собираем данные, которые позволили бы определить, что пользователь является несовершеннолетним.</p>
+      <p class="lang-en">Users of the Starty extension are individuals who have installed the extension in their browser. The extension is not designed for, and is not intentionally directed at, children under 18; we do not ask for the user's age and do not collect data that would allow us to determine that a user is a minor.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2>Правовое основание обработки</h2></div></div>
-      <p>Обработка осуществляется на основании согласия пользователя (ст. 9 152-ФЗ) — оформляется отдельным документом «Согласие на обработку персональных данных», в котором отдельно описаны основные функции (согласие даётся фактом использования расширения по назначению) и опциональные функции, включаемые отдельными тумблерами (погода, синхронизация). Пользователь может в любой момент прекратить обработку данных для опциональных функций, отключив соответствующий тумблер в настройках.</p>
+      <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2><span class="lang-ru">Правовое основание обработки</span><span class="lang-en">Legal Basis for Processing</span></h2></div></div>
+      <p class="lang-ru">Обработка осуществляется на основании согласия пользователя (ст. 9 152-ФЗ) — оформляется отдельным документом «Согласие на обработку персональных данных», в котором отдельно описаны основные функции (согласие даётся фактом использования расширения по назначению) и опциональные функции, включаемые отдельными тумблерами (погода, синхронизация, подсказки при поиске). Пользователь может в любой момент прекратить обработку данных для опциональных функций, отключив соответствующий тумблер в настройках.</p>
+      <p class="lang-en">Processing is carried out on the basis of user consent (Art. 9 of Federal Law No. 152-FZ "On Personal Data") — documented separately in the "Consent to Personal Data Processing", which distinguishes core features (consent given by the fact of using the extension as intended) from optional features enabled via individual toggles (weather, sync, search suggestions). The user may stop processing for any optional feature at any time by turning off the corresponding toggle in settings.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2>Способы и сроки обработки и хранения</h2></div></div>
-      <ul>
+      <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2><span class="lang-ru">Способы и сроки обработки и хранения</span><span class="lang-en">Methods and Retention Periods</span></h2></div></div>
+      <ul class="lang-ru">
         <li>Название города и настройки хранятся локально в браузере пользователя (<code>chrome.storage</code>), пока пользователь не удалит расширение или не очистит данные вручную</li>
         <li>При включённой синхронизации — данные дополнительно хранятся в инфраструктуре синхронизации браузера пользователя</li>
       </ul>
-      <p>Мы не храним резервных копий персональных данных пользователей на собственных серверах — на данный момент (версия 1.0) собственных серверов, обрабатывающих персональные данные, у Starty нет.</p>
+      <ul class="lang-en">
+        <li>The city name and settings are stored locally in the user's browser (<code>chrome.storage</code>) until the user removes the extension or manually clears the data</li>
+        <li>If sync is enabled, the data is additionally stored in the user's browser sync infrastructure</li>
+      </ul>
+      <p class="lang-ru">Мы не храним резервных копий персональных данных пользователей на собственных серверах — на данный момент (версия 1.0) собственных серверов, обрабатывающих персональные данные, у Starty нет.</p>
+      <p class="lang-en">We do not keep backup copies of users' personal data on our own servers — as of now (version 1.0), Starty has no servers of its own that process personal data.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">7</div><div class="section-body"><h2>Порядок уничтожения персональных данных</h2></div></div>
-      <ul>
-        <li>Данные, хранящиеся локально, уничтожаются при удалении расширения пользователем или очистке данных браузера</li>
+      <div class="section-head"><div class="section-num">7</div><div class="section-body"><h2><span class="lang-ru">Порядок уничтожения персональных данных</span><span class="lang-en">Data Deletion Procedure</span></h2></div></div>
+      <ul class="lang-ru">
+        <li>Кнопка «Удалить все данные Starty» в настройках (Синхронизация и бэкап) — безвозвратно удаляет все локальные данные (ссылки, режимы, заметки, задачи, кастомные изображения, кэш значков сайтов, расписание) и, если была включена синхронизация, соответствующие данные в инфраструктуре синхронизации вашего браузера — без необходимости удалять расширение целиком</li>
+        <li>Данные, хранящиеся локально, также уничтожаются при удалении расширения пользователем или очистке данных браузера</li>
         <li>Отключение соответствующей функции в настройках останавливает дальнейшую передачу данных</li>
-        <li>Данные синхронизации — мы не имеем технического доступа к ним для удаления по запросу, так как они хранятся в инфраструктуре вашего браузера. Чтобы удалить их — отключите синхронизацию и/или очистите данные синхронизации через настройки вашего браузерного аккаунта</li>
-        <li>Обезличенные события в Яндекс.Метрике не содержат данных, позволяющих связать их с конкретным человеком — поэтому мы не можем выборочно удалить данные конкретного пользователя. Чтобы остановить передачу — отключите тумблер «Статистика использования»</li>
+        <li>Данные синхронизации, помимо кнопки выше, можно удалить полностью, отключив синхронизацию и очистив данные синхронизации через настройки вашего браузерного аккаунта — это может понадобиться, если синхронизация была включена на устройстве, к которому у вас больше нет доступа</li>
+      </ul>
+      <ul class="lang-en">
+        <li>The "Delete all Starty data" button in settings (Sync & Backup) permanently deletes all local data (links, modes, notes, tasks, custom images, favicon cache, schedule) and, if sync was enabled, the corresponding data in your browser's sync infrastructure — without needing to remove the extension entirely</li>
+        <li>Locally stored data is also destroyed when the user removes the extension or clears browser data</li>
+        <li>Turning off a feature in settings stops any further transmission of data</li>
+        <li>Beyond the button above, sync data can be fully removed by disabling sync and clearing sync data through your browser account settings — this may be needed if sync was enabled on a device you no longer have access to</li>
       </ul>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">8</div><div class="section-body"><h2>Права субъекта персональных данных</h2></div></div>
-      <p>Пользователь имеет право:</p>
-      <ul>
+      <div class="section-head"><div class="section-num">8</div><div class="section-body"><h2><span class="lang-ru">Права субъекта персональных данных</span><span class="lang-en">Data Subject Rights</span></h2></div></div>
+      <p class="lang-ru">Пользователь имеет право:</p>
+      <p class="lang-en">The user has the right to:</p>
+      <ul class="lang-ru">
         <li>Получить информацию об обработке своих персональных данных</li>
         <li>Потребовать уточнения, блокирования или уничтожения неточных или незаконно обрабатываемых данных</li>
         <li>Отозвать согласие на обработку персональных данных в любой момент</li>
         <li>Обратиться с жалобой в Роскомнадзор, если считает, что его права нарушены</li>
       </ul>
-      <p>По вопросам об обработке данных — можно написать на контактный email из раздела 1. Но важно понимать: у нас нет собственной базы данных пользователей (см. раздел 6) — все ваши данные хранятся локально, в инфраструктуре вашего браузера или обезличенно в Яндекс.Метрике. Большинство прав реализуется вами самостоятельно через настройки — см. разделы 6 и 7.</p>
+      <ul class="lang-en">
+        <li>Receive information about the processing of their personal data</li>
+        <li>Request correction, blocking, or deletion of inaccurate or unlawfully processed data</li>
+        <li>Withdraw consent to personal data processing at any time</li>
+        <li>File a complaint with Roskomnadzor if they believe their rights have been violated</li>
+      </ul>
+      <p class="lang-ru">По вопросам об обработке данных — можно написать на контактный email из раздела 1. Но важно понимать: у нас нет собственной базы данных пользователей (см. раздел 6) — все ваши данные хранятся локально или в инфраструктуре вашего браузера. Большинство прав реализуется вами самостоятельно через настройки, включая кнопку «Удалить все данные Starty» — см. разделы 6 и 7.</p>
+      <p class="lang-en">For questions about data processing, you can write to the contact email in section 1. It's worth understanding, though: we have no database of users of our own (see section 6) — all your data is stored locally or in your browser's infrastructure. Most rights are exercised by you directly through settings, including the "Delete all Starty data" button — see sections 6 and 7.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">9</div><div class="section-body"><h2>Как отозвать согласие</h2></div></div>
-      <p><strong>Опциональные функции</strong> (погода, синхронизация) — отключите соответствующий тумблер в настройках в любой момент.</p>
-      <p><strong>Основные функции</strong> (значки сайтов, подсказки поиска, импорт закладок, подсказки недавних сайтов) — отдельного тумблера нет; не используйте функцию либо удалите расширение.</p>
-      <p>Подробнее — в <a href="consent.html">Согласии на обработку персональных данных</a>.</p>
+      <div class="section-head"><div class="section-num">9</div><div class="section-body"><h2><span class="lang-ru">Как отозвать согласие</span><span class="lang-en">How to Withdraw Consent</span></h2></div></div>
+      <p><strong class="lang-ru">Опциональные функции</strong><span class="lang-ru"> (погода, синхронизация, подсказки при поиске) — отключите соответствующий тумблер в настройках в любой момент.</span><strong class="lang-en">Optional features</strong><span class="lang-en"> (weather, sync, search suggestions) — turn off the corresponding toggle in settings at any time.</span></p>
+      <p><strong class="lang-ru">Основные функции</strong><span class="lang-ru"> (значки сайтов, импорт закладок, подсказки недавних сайтов) — отдельного тумблера нет; не используйте функцию либо удалите расширение.</span><strong class="lang-en">Core features</strong><span class="lang-en"> (site icons, bookmark import, recent-site suggestions) — there is no separate toggle; simply don't use the feature, or remove the extension.</span></p>
+      <p class="lang-ru">Подробнее — в <a href="consent.html">Согласии на обработку персональных данных</a>.</p>
+      <p class="lang-en">See the <a href="consent.html">Consent to Personal Data Processing</a> for details.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">10</div><div class="section-body"><h2>Меры по обеспечению безопасности</h2></div></div>
-      <ul>
+      <div class="section-head"><div class="section-num">10</div><div class="section-body"><h2><span class="lang-ru">Меры по обеспечению безопасности</span><span class="lang-en">Security Measures</span></h2></div></div>
+      <ul class="lang-ru">
         <li>Данные о городе передаются по HTTPS напрямую во внешние сервисы — без промежуточного хранения на серверах Starty</li>
         <li>Расширение не запрашивает и не хранит пароли, платёжные данные или иную чувствительную информацию</li>
         <li>Код расширения проходит проверку Chrome Web Store перед публикацией</li>
       </ul>
+      <ul class="lang-en">
+        <li>City data is transmitted over HTTPS directly to external services — with no intermediate storage on Starty servers</li>
+        <li>The extension does not request or store passwords, payment data, or other sensitive information</li>
+        <li>The extension's code goes through Chrome Web Store review before publication</li>
+      </ul>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">11</div><div class="section-body"><h2>Условия прекращения обработки</h2></div></div>
-      <p>Обработка прекращается при достижении цели обработки, отзыве согласия пользователем, обнаружении неправомерной обработки, либо при удалении расширения.</p>
+      <div class="section-head"><div class="section-num">11</div><div class="section-body"><h2><span class="lang-ru">Условия прекращения обработки</span><span class="lang-en">Conditions for Termination of Processing</span></h2></div></div>
+      <p class="lang-ru">Обработка прекращается при достижении цели обработки, отзыве согласия пользователем, обнаружении неправомерной обработки, либо при удалении расширения.</p>
+      <p class="lang-en">Processing ends when its purpose has been achieved, when the user withdraws consent, when unlawful processing is discovered, or when the extension is removed.</p>
     </div>
 
     <div class="section">
-      <div class="section-head"><div class="section-num">12</div><div class="section-body"><h2>Изменения в политике</h2></div></div>
-      <p>Мы можем обновлять эту политику по мере развития продукта. Актуальная версия всегда доступна по этой ссылке. Дата последнего обновления указана в начале документа.</p>
+      <div class="section-head"><div class="section-num">12</div><div class="section-body"><h2><span class="lang-ru">Изменения в политике</span><span class="lang-en">Changes to This Policy</span></h2></div></div>
+      <p class="lang-ru">Мы можем обновлять эту политику по мере развития продукта. Актуальная версия всегда доступна по этой ссылке. Дата последнего обновления указана в начале документа.</p>
+      <p class="lang-en">We may update this policy as the product evolves. The current version is always available at this link. The date of the last update is shown at the top of this document.</p>
     </div>
 
   </div>
 </div>
 <footer><div class="page">Starty · 2026</div></footer>
+<script src="lang-toggle.js"></script>
 </body>
 </html>
