@@ -34,8 +34,13 @@ body{
    ширины с независимым центрированием (это и съезжало раньше) ── */
 .page{max-width:680px;margin:0 auto;padding:0 24px}
 
-/* ── Nav ── */
+/* ── Nav — шире основной колонки контента (680px), чтобы полные названия
+   всех документов помещались в одну строку с комфортным запасом, а не
+   впритык — раньше подсчёт по ширине показывал, что полный текст едва
+   помещается в 680px, из-за чего перенос срабатывал непредсказуемо в
+   зависимости от точной ширины окна ── */
 nav .page{
+  max-width:900px;
   padding-top:28px;padding-bottom:20px;
   display:flex;gap:22px;align-items:center;flex-wrap:nowrap;
 }
@@ -79,7 +84,6 @@ h1{
   border:1px solid var(--border2);
   border-radius:20px;
   padding:8px 40px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.45),0 2px 8px rgba(0,0,0,0.3);
   margin-bottom:80px;
 }
 
@@ -144,6 +148,14 @@ footer{padding:32px 0 60px;font-size:12.5px;color:var(--muted)}
 .doc-link:hover .doc-link-title .arrow{transform:translateX(4px)}
 .doc-link-desc{color:var(--muted);font-size:13.5px;margin-top:6px}
 
+/* ── Nav — на узких окнах переносим осознанно, в 2 ряда с центровкой,
+   вместо того чтобы рисковать переполнением впритык на промежуточных
+   ширинах между "полностью помещается" и "точно мобильный" ── */
+@media (max-width:720px){
+  nav .page{flex-wrap:wrap;row-gap:12px}
+  .lang-toggle{margin-left:0;order:10}
+}
+
 /* ── Mobile ── */
 @media (max-width:640px){
   .hero{padding:44px 0 4px}
@@ -173,7 +185,3 @@ html[data-lang="ru"] .lang-en{display:none!important}
 }
 .lang-toggle button.active{background:var(--surface3);color:var(--text2)}
 .lang-toggle button:hover:not(.active){color:var(--text)}
-@media (max-width:640px){
-  nav .page{flex-wrap:wrap}
-  .lang-toggle{margin-left:0;order:10}
-}
