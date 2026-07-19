@@ -59,23 +59,21 @@
 
     <div class="section">
       <div class="section-head"><div class="section-num">2</div><div class="section-body"><h2><span class="lang-ru">Цели обработки персональных данных</span><span class="lang-en">Purposes of Processing</span></h2></div></div>
+      <div class="callout lang-ru">Прогноз погоды и синхронизация между устройствами временно недоступны в текущей версии расширения — до появления собственной серверной инфраструктуры в РФ, которую планируем развернуть по мере роста числа пользователей. Подробнее — раздел 3a.</div>
+      <div class="callout lang-en">The weather forecast and cross-device sync are temporarily unavailable in the current version of the extension — pending our own server infrastructure in Russia, which we plan to set up as our user base grows. See section 3a for details.</div>
       <p class="lang-ru">Мы обрабатываем персональные данные исключительно для следующих целей:</p>
       <p class="lang-en">We process personal data exclusively for the following purposes:</p>
       <ul class="lang-ru">
-        <li>Отображение прогноза погоды по городу, который пользователь указывает самостоятельно</li>
         <li>Отображение значков (favicon) сайтов, ссылки на которые пользователь сохраняет в расширении — обрабатывается локально, не передаётся третьим лицам</li>
-        <li>Показ подсказок при вводе запроса в строку поиска (только если пользователь сам включил эту функцию — по умолчанию выключена)</li>
+        <li>Показ подсказок при вводе запроса в строку поиска — из встроенного локального словаря, без обращения к внешним сервисам</li>
         <li>Предложение быстрого добавления ссылок на основе закладок браузера (только при первой настройке, по выбору пользователя) и недавно закрытых вкладок (при открытии формы добавления ссылки)</li>
         <li>Подбор релевантных ссылок на основе указанной пользователем сферы деятельности при первой настройке расширения</li>
-        <li>Синхронизация настроек и сохранённых ссылок между устройствами пользователя (только если пользователь сам включил эту функцию)</li>
       </ul>
       <ul class="lang-en">
-        <li>Displaying a weather forecast for a city the user enters themselves</li>
         <li>Displaying site icons (favicons) for links the user saves in the extension — processed locally, not shared with third parties</li>
-        <li>Showing suggestions while typing in the search bar (only if the user has enabled this feature themselves — off by default)</li>
+        <li>Showing suggestions while typing in the search bar — from a built-in local dictionary, with no calls to external services</li>
         <li>Offering quick-add suggestions based on browser bookmarks (only during initial setup, by user choice) and recently closed tabs (when opening the add-link form)</li>
         <li>Suggesting relevant links based on the industry the user specifies during initial setup</li>
-        <li>Syncing settings and saved links across the user's devices (only if the user has enabled this feature themselves)</li>
       </ul>
       <p class="lang-ru">Мы <strong>не используем</strong> персональные данные для целей, не указанных выше — в частности, не передаём и не продаём их третьим лицам для маркетинга, не используем для кредитного скоринга и не строим индивидуальные профили пользователей.</p>
       <p class="lang-en">We <strong>do not use</strong> personal data for any purpose other than those listed above — in particular, we do not share or sell it to third parties for marketing, use it for credit scoring, or build individual user profiles.</p>
@@ -83,30 +81,15 @@
 
     <div class="section">
       <div class="section-head"><div class="section-num">3</div><div class="section-body"><h2><span class="lang-ru">Какие данные обрабатываются</span><span class="lang-en">What Data Is Processed</span></h2></div></div>
-      <p><strong class="lang-ru">3.1. Данные, которые передаются во внешние сервисы</strong><strong class="lang-en">3.1. Data sent to external services</strong></p>
-      <table class="lang-ru">
-        <thead><tr><th>Данные</th><th>Когда</th><th>Куда</th></tr></thead>
-        <tbody>
-          <tr><td>Название города</td><td>Только если пользователь сам вписал город текстом (без GPS)</td><td>open-meteo.com, wttr.in</td></tr>
-          <tr><td>Текст в строке поиска (по мере набора)</td><td>Только если включена функция «Подсказки при поиске» (по умолчанию выключена)</td><td>suggestqueries.google.com</td></tr>
-          <tr><td>Сохранённые ссылки, папки, режимы, заметки, задачи</td><td>Только если включена синхронизация</td><td>Инфраструктура синхронизации браузера</td></tr>
-        </tbody>
-      </table>
-      <table class="lang-en">
-        <thead><tr><th>Data</th><th>When</th><th>Where</th></tr></thead>
-        <tbody>
-          <tr><td>City name</td><td>Only if the user has typed in a city name themselves (no GPS)</td><td>open-meteo.com, wttr.in</td></tr>
-          <tr><td>Search bar text (as you type)</td><td>Only if the "Search suggestions" feature is enabled (off by default)</td><td>suggestqueries.google.com</td></tr>
-          <tr><td>Saved links, folders, modes, notes, tasks</td><td>Only if sync is enabled</td><td>Browser sync infrastructure</td></tr>
-        </tbody>
-      </table>
-      <p><strong class="lang-ru">3.2. Данные, которые обрабатываются только локально (никогда не покидают ваше устройство)</strong><strong class="lang-en">3.2. Data processed only locally (never leaves your device)</strong></p>
+      <p class="lang-ru"><strong>В текущей версии расширение не передаёт данные ни в один внешний сервис.</strong> Все данные обрабатываются исключительно локально, на устройстве пользователя.</p>
+      <p class="lang-en"><strong>In the current version, the extension does not transmit data to any external service.</strong> All data is processed exclusively locally, on the user's device.</p>
       <table class="lang-ru">
         <thead><tr><th>Данные</th><th>Когда</th><th>Зачем</th></tr></thead>
         <tbody>
           <tr><td>Домен сохранённой ссылки</td><td>При отображении значка (favicon) сайта на плитке</td><td>Получение иконки сайта из локальной базы фавиконок браузера (разрешение <code>favicon</code>) — запрос не выходит за пределы устройства</td></tr>
           <tr><td>Закладки браузера</td><td>Только при импорте закладок в настройке (само разрешение браузер запрашивает в момент нажатия кнопки «Импортировать закладки», а не при установке расширения)</td><td>Предложить выбрать закладки для добавления как плитки</td></tr>
           <tr><td>Недавно закрытые вкладки</td><td>При открытии формы добавления ссылки</td><td>Предложить быстро добавить недавний сайт</td></tr>
+          <tr><td>Текст поискового запроса</td><td>При вводе в строку поиска</td><td>Подбор подсказок из встроенного локального словаря — сравнение происходит на устройстве, никуда не отправляется</td></tr>
         </tbody>
       </table>
       <table class="lang-en">
@@ -115,12 +98,19 @@
           <tr><td>Domain of a saved link</td><td>When displaying a site's favicon on a tile</td><td>Fetching the site icon from the browser's local favicon database (<code>favicon</code> permission) — the request never leaves the device</td></tr>
           <tr><td>Browser bookmarks</td><td>Only during bookmark import in setup (the browser itself requests this permission at the moment you click "Import bookmarks", not at install time)</td><td>Letting you pick which bookmarks to add as tiles</td></tr>
           <tr><td>Recently closed tabs</td><td>When opening the add-link form</td><td>Suggesting a recent site for quick adding</td></tr>
+          <tr><td>Search query text</td><td>When typing in the search bar</td><td>Matching suggestions from a built-in local dictionary — comparison happens on-device, nothing is sent anywhere</td></tr>
         </tbody>
       </table>
-      <p class="lang-ru">Данные из раздела 3.2 технически доступны расширению (через разрешения <code>bookmarks</code>, <code>sessions</code> и <code>favicon</code>), но обрабатываются исключительно на устройстве пользователя — мы не отправляем их на какой-либо сервер.</p>
-      <p class="lang-en">The data in section 3.2 is technically accessible to the extension (via the <code>bookmarks</code>, <code>sessions</code>, and <code>favicon</code> permissions), but is processed exclusively on the user's device — we do not send it to any server.</p>
-      <p class="lang-ru">Мы <strong>не собираем и не храним</strong>: имя, фамилию, email, номер телефона, пароли, платёжные данные. Историю посещённых сайтов <strong>не собираем и не анализируем</strong>, кроме моментального локального показа подсказок из раздела 3.2.</p>
-      <p class="lang-en">We <strong>do not collect or store</strong>: first/last name, email, phone number, passwords, or payment details. We <strong>do not collect or analyze</strong> browsing history, other than the instantaneous local display of the suggestions described in section 3.2.</p>
+      <p class="lang-ru">Все данные из таблицы выше технически доступны расширению (через разрешения <code>bookmarks</code>, <code>sessions</code> и <code>favicon</code>), но обрабатываются исключительно на устройстве пользователя — мы не отправляем их на какой-либо сервер, у нас его нет.</p>
+      <p class="lang-en">All data in the table above is technically accessible to the extension (via the <code>bookmarks</code>, <code>sessions</code>, and <code>favicon</code> permissions), but is processed exclusively on the user's device — we do not send it to any server, as we don't have one.</p>
+      <p class="lang-ru">Мы <strong>не собираем и не храним</strong>: имя, фамилию, email, номер телефона, пароли, платёжные данные. Историю посещённых сайтов <strong>не собираем и не анализируем</strong>, кроме моментального локального показа подсказок из таблицы выше.</p>
+      <p class="lang-en">We <strong>do not collect or store</strong>: first/last name, email, phone number, passwords, or payment details. We <strong>do not collect or analyze</strong> browsing history, other than the instantaneous local display of the suggestions described in the table above.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><div class="section-num">3a</div><div class="section-body"><h2><span class="lang-ru">Временно отключённые функции</span><span class="lang-en">Temporarily Disabled Features</span></h2></div></div>
+      <p class="lang-ru">Прогноз погоды и синхронизация между устройствами <strong>временно отключены</strong> в этой версии расширения — до появления собственной серверной инфраструктуры на территории РФ. Соответствующий интерфейс скрыт, а не просто выключен: код, отправляющий запросы к этим сервисам, удалён из расширения полностью, а не временно деактивирован. Планируем вернуть обе функции по мере роста числа пользователей — тогда же появится и собственный сервер в РФ, необходимый для этого по закону. Когда это произойдёт, настоящая Политика будет обновлена заранее, с описанием новых каналов передачи данных.</p>
+      <p class="lang-en">The weather forecast and cross-device sync are <strong>temporarily disabled</strong> in this version of the extension — pending our own server infrastructure located in Russia. The corresponding interface is hidden, not merely turned off: the code that sends requests to these services has been removed from the extension entirely, not just deactivated. We plan to bring both features back as our user base grows — which is also when our own server in Russia, legally required for this, will be set up. When that happens, this Policy will be updated in advance, describing the new data transmission channels.</p>
     </div>
 
     <div class="section">
@@ -131,19 +121,19 @@
 
     <div class="section">
       <div class="section-head"><div class="section-num">5</div><div class="section-body"><h2><span class="lang-ru">Правовое основание обработки</span><span class="lang-en">Legal Basis for Processing</span></h2></div></div>
-      <p class="lang-ru">Обработка осуществляется на основании согласия пользователя (ст. 9 152-ФЗ) — оформляется отдельным документом «Согласие на обработку персональных данных», в котором отдельно описаны основные функции (согласие даётся фактом использования расширения по назначению) и опциональные функции, включаемые отдельными тумблерами (погода, синхронизация, подсказки при поиске). Пользователь может в любой момент прекратить обработку данных для опциональных функций, отключив соответствующий тумблер в настройках.</p>
-      <p class="lang-en">Processing is carried out on the basis of user consent (Art. 9 of Federal Law No. 152-FZ "On Personal Data") — documented separately in the "Consent to Personal Data Processing", which distinguishes core features (consent given by the fact of using the extension as intended) from optional features enabled via individual toggles (weather, sync, search suggestions). The user may stop processing for any optional feature at any time by turning off the corresponding toggle in settings.</p>
+      <p class="lang-ru">Обработка осуществляется на основании согласия пользователя (ст. 9 152-ФЗ) — оформляется отдельным документом «Согласие на обработку персональных данных». В текущей версии все функции обрабатывают данные исключительно локально — отдельных тумблеров, включающих передачу данных куда-либо, нет. Когда вернутся погода и синхронизация (см. раздел 3a), для них снова появятся отдельные тумблеры и согласие будет запрашиваться отдельно на каждую.</p>
+      <p class="lang-en">Processing is carried out on the basis of user consent (Art. 9 of Federal Law No. 152-FZ "On Personal Data") — documented separately in the "Consent to Personal Data Processing". In the current version, all features process data exclusively locally — there are no toggles enabling any data transmission elsewhere. When weather and sync return (see section 3a), separate toggles and separate consent will apply to each again.</p>
     </div>
 
     <div class="section">
       <div class="section-head"><div class="section-num">6</div><div class="section-body"><h2><span class="lang-ru">Способы и сроки обработки и хранения</span><span class="lang-en">Methods and Retention Periods</span></h2></div></div>
       <ul class="lang-ru">
         <li>Название города и настройки хранятся локально в браузере пользователя (<code>chrome.storage</code>), пока пользователь не удалит расширение или не очистит данные вручную</li>
-        <li>При включённой синхронизации — данные дополнительно хранятся в инфраструктуре синхронизации браузера пользователя</li>
+        <li>При включённой синхронизации — данные дополнительно хранятся в инфраструктуре синхронизации браузера пользователя (в текущей версии синхронизация временно недоступна, см. раздел 3a)</li>
       </ul>
       <ul class="lang-en">
         <li>The city name and settings are stored locally in the user's browser (<code>chrome.storage</code>) until the user removes the extension or manually clears the data</li>
-        <li>If sync is enabled, the data is additionally stored in the user's browser sync infrastructure</li>
+        <li>If sync is enabled, the data is additionally stored in the user's browser sync infrastructure (sync is temporarily unavailable in the current version, see section 3a)</li>
       </ul>
       <p class="lang-ru">Мы не храним резервных копий персональных данных пользователей на собственных серверах — на данный момент (версия 1.0) собственных серверов, обрабатывающих персональные данные, у Starty нет.</p>
       <p class="lang-en">We do not keep backup copies of users' personal data on our own servers — as of now (version 1.0), Starty has no servers of its own that process personal data.</p>
@@ -187,8 +177,8 @@
 
     <div class="section">
       <div class="section-head"><div class="section-num">9</div><div class="section-body"><h2><span class="lang-ru">Как отозвать согласие</span><span class="lang-en">How to Withdraw Consent</span></h2></div></div>
-      <p><strong class="lang-ru">Опциональные функции</strong><span class="lang-ru"> (погода, синхронизация, подсказки при поиске) — отключите соответствующий тумблер в настройках в любой момент.</span><strong class="lang-en">Optional features</strong><span class="lang-en"> (weather, sync, search suggestions) — turn off the corresponding toggle in settings at any time.</span></p>
-      <p><strong class="lang-ru">Основные функции</strong><span class="lang-ru"> (значки сайтов, импорт закладок, подсказки недавних сайтов) — отдельного тумблера нет; не используйте функцию либо удалите расширение.</span><strong class="lang-en">Core features</strong><span class="lang-en"> (site icons, bookmark import, recent-site suggestions) — there is no separate toggle; simply don't use the feature, or remove the extension.</span></p>
+      <p class="lang-ru">В текущей версии все функции расширения обрабатывают данные локально — отзывать согласие на передачу куда-либо не требуется, потому что передачи нет. Если не хотите пользоваться конкретной локальной функцией (значки сайтов, импорт закладок, подсказки недавних сайтов, подсказки поиска) — просто не используйте её, либо удалите расширение целиком.</p>
+      <p class="lang-en">In the current version, all features of the extension process data locally — there is nothing to withdraw consent for, because there is no transmission. If you don't want to use a particular local feature (site icons, bookmark import, recent-site suggestions, search suggestions), simply don't use it, or remove the extension entirely.</p>
       <p class="lang-ru">Подробнее — в <a href="consent.html">Согласии на обработку персональных данных</a>.</p>
       <p class="lang-en">See the <a href="consent.html">Consent to Personal Data Processing</a> for details.</p>
     </div>
